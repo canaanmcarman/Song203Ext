@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:inline="text"> The song name was [[${song.name}]]</p>
+<p th:inline="text"> The artist name is [[${song.artist}]]</p>
+<p th:inline="text"> The album name is [[${song.album}]]</p>
+<p th:inline="text"> The rating was [[${song.rating}]] and the year was [[${song.year}]]</p>
+<p th:inline="text"> The genre is [[${song.genre}]]</p>
+<div th:if="${song.inStock}">
+    <p>This song is in stock!</p>
+</div>
+<div th:unless="${song.inStock}">
+    <p> This song is not in stock</p>
+</div>
+</body>
+</html>
